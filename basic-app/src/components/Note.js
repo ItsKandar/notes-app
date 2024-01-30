@@ -33,6 +33,7 @@ function Note() {
         });
 
         if (response.ok) {
+            await fetchNote();
             navigate('/'); // or wherever you want to redirect the user after saving
         } else {
             console.error('Failed to save note');
