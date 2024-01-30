@@ -37,6 +37,7 @@
   color: inherit;
   text-decoration: inherit;
   font-weight: bold;
+  flex-grow: 1; /* Permet au lien de prendre tout l'espace disponible */
 }
 
 .Note-link.active {
@@ -46,6 +47,12 @@
 .Note-link-lastUpdatedAt {
   font-size: 10px;
   color: darkgrey;
+}
+
+.Note-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .Button {
@@ -69,4 +76,23 @@
   padding: 8px;
   font-size: 10px;
   color: darkgrey;
+}
+
+.Button-delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 8px; /* Ajoute un peu d'espace entre le lien et le bouton */
+}
+
+.Icon-delete {
+  fill: white; /* Couleur de l'icône */
+  width: 24px; /* Taille de l'icône */
+  height: 24px;
+}
+
+/* Vous pouvez ajouter des effets au survol */
+.Button-delete:hover .Icon-delete {
+  fill: red; /* Change la couleur au survol */
 }

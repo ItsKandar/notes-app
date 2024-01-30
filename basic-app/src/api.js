@@ -23,3 +23,13 @@ export const createNote = async () => {
   if (response.ok) return response.json();
   else throw new Error('Erreur lors de la création de la note');
 };
+
+export const deleteNote = async (noteId) => {
+  const response = await fetch(`http://localhost:4000/notes/${noteId}`, {
+    method: 'DELETE',
+  });
+
+  if (!response.ok) {
+    throw new Error('Erreur lors de la suppression de la note');
+  }
+};
