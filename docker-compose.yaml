@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  json-server:
+    container_name: json-server
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+    ports:
+      - "4000:4000"
+    networks:
+      - app-network
+    stdin_open: true
+    tty: true
+
+  react-app:
+    container_name: react-app
+    build:
+      context: ./basic-app
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    networks:
+      - app-network
+    stdin_open: true
+    tty: true
+
+networks:
+  app-network:
+    driver: bridge
