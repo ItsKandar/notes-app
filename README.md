@@ -1,10 +1,17 @@
 # Comment lancer
 
-cd ./api
-npx json-server@0.17.4 --watch db.json --port 4000
+## Avec des commandes
+``cd ./api
+npx json-server@0.17.4 --watch db.json --port 4000``
 
-cd ./basic-app
-npm start
+Dans un autre terminal
+
+``cd ./basic-app
+npm start``
+
+## Avec Docker
+``docker-compose up`` pour tester
+``docker-compose up -d`` pour lancer en background
 
 # Getting Started with Create React App
 
